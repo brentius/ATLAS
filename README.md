@@ -1,7 +1,7 @@
-# OPENPROBE
+# ATLAS
 *Written in the prophetic perfect tense to give myself some motivation*
 
-ATLAS (Atomic-scale Tunneling and Local Analysis Syste*) is a low-cost scanning tunneling microscope (STM) build inspired by Dimsmary's OpenSTM project (https://github.com/Dimsmary/OpenSTM), with the end goal to accurately image carbon atoms on the lattice of a sample of HOPG.
+ATLAS (the Atomic-scale Tunneling and Local Analysis System) is a low-cost scanning tunneling microscope (STM) build inspired by Dimsmary's OpenSTM project (https://github.com/Dimsmary/OpenSTM), with the end goal to accurately image carbon atoms on the lattice of a sample of HOPG.
 ## File Structure
 
 ```
