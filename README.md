@@ -6,23 +6,6 @@ ATLAS (the Atomic-scale Tunneling and Local Analysis System) is a low-cost scann
 
 ```
 \pcb
-	\stm_pmod
-		stm_pmod.kicad_pcb
-		stm_pmod.kicad_prl
-		stm_pmod.kicad_pro
-		stm_pmod.kicad_sch
-	\stm_psu
-		stm_psu.kicad_pcb
-		stm_psu.kicad_prl
-		stm_psu.kicad_pro
-		stm_psu.kicad_sch
-	\stm_tia
-		stm_tia.kicad_pcb
-		stm_tia.kicad_prl
-		stm_tia.kicad_pro
-		stm_tia.kicad_sch
-	stm_parts_lib.bak
-	stm_parts_lib.kicad_sym
 \code
 \cad
 \reference
