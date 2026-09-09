@@ -1,4 +1,6 @@
 # ATLAS
+> **Current design:** [ATLAS project architecture](ATLAS_ARCHITECTURE.md), revised 9 September 2026, contains the current recommended components, approach comparison, validation plan and £1,500 budget including the FPGA. The narrative below is an earlier draft; its component lists and descriptions of completed hardware are not the current specification.
+
 *Written in the prophetic perfect tense to give myself some motivation*
 
 ATLAS (the Atomic-scale Tunneling and Local Analysis System) is a low-cost scanning tunneling microscope (STM) build inspired by Dimsmary's OpenSTM project (https://github.com/Dimsmary/OpenSTM), with the end goal to accurately image carbon atoms on the lattice of a sample of HOPG.
