@@ -8,3 +8,20 @@
 *-[Pp][Ll][Aa][Nn].[Mm][Dd]
 [Pp][Ll][Aa][Nn]_*.md
 [Pp][Ll][Aa][Nn]-*.md
+
+# PCB sources and parts libraries only; ignore temporary files and design plans.
+/pcb/**
+!/pcb/**/
+!/pcb/**/*.kicad_pro
+!/pcb/**/*.kicad_sch
+!/pcb/**/*.kicad_pcb
+!/pcb/**/*.kicad_sym
+!/pcb/**/*.pretty/*.kicad_mod
+!/pcb/**/fp-lib-table
+!/pcb/**/sym-lib-table
+
+# Keep saved history and autosaves ignored even when they contain KiCad sources.
+/pcb/**/.history/
+/pcb/**/*-backups/
+/pcb/**/_autosave-*
+/pcb/**/~*
