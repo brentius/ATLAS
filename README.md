@@ -1,5 +1,5 @@
 # ATLAS
-> **Current design:** [ATLAS project architecture](ATLAS_ARCHITECTURE.md), revised 9 September 2026, contains the current recommended components, approach comparison, validation plan and £1,500 budget including the FPGA. The narrative below is an earlier draft; its component lists and descriptions of completed hardware are not the current specification.
+> **Current design:** The local ATLAS project architecture document (not tracked in this repository), revised 9 September 2026, contains the current recommended components, approach comparison, validation plan and £1,500 budget including the FPGA. The narrative below is an earlier draft; its component lists and descriptions of completed hardware are not the current specification.
 
 *Written in the prophetic perfect tense to give myself some motivation*
 

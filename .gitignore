@@ -1,0 +1,10 @@
+# Local architecture and planning documents
+/ATLAS_ARCHITECTURE.md
+[Pp][Ll][Aa][Nn][Ss]/
+[Pp][Ll][Aa][Nn][Nn][Ii][Nn][Gg]/
+[Pp][Ll][Aa][Nn].[Mm][Dd]
+[Pp][Ll][Aa][Nn][Nn][Ii][Nn][Gg].[Mm][Dd]
+*_[Pp][Ll][Aa][Nn].[Mm][Dd]
+*-[Pp][Ll][Aa][Nn].[Mm][Dd]
+[Pp][Ll][Aa][Nn]_*.md
+[Pp][Ll][Aa][Nn]-*.md
