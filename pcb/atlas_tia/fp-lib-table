@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "atlas_parts_lib") (type "KiCad") (uri "${KIPRJMOD}/../atlas_parts_lib.pretty") (options "") (descr "ATLAS project footprints"))
+)
