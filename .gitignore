@@ -8,6 +8,8 @@
 *-[Pp][Ll][Aa][Nn].[Mm][Dd]
 [Pp][Ll][Aa][Nn]_*.md
 [Pp][Ll][Aa][Nn]-*.md
+*_[Rr][Ee][Vv][Ii][Ee][Ww].[Mm][Dd]
+*_[Ee][Vv][Aa][Ll][Uu][Aa][Tt][Ii][Oo][Nn].[Mm][Dd]
 
 # PCB sources and parts libraries only; ignore temporary files and design plans.
 /pcb/**
@@ -20,8 +22,17 @@
 !/pcb/**/fp-lib-table
 !/pcb/**/sym-lib-table
 
-# Keep saved history and autosaves ignored even when they contain KiCad sources.
+# Keep saved history, autosaves and review snapshots ignored even when they contain KiCad sources.
 /pcb/**/.history/
 /pcb/**/*-backups/
 /pcb/**/_autosave-*
 /pcb/**/~*
+/pcb/**/routing_review/
+
+# TI's downloaded OPAx828 model is kept locally for simulation, not vendored.
+/sim/atlas_tia/vendor/
+/sim/atlas_tia/*.log
+/sim/atlas_tia/*.raw
+/sim/atlas_tia/*.db
+/sim/atlas_tia/__pycache__/
+/sim/atlas_tia/generated/
