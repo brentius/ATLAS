@@ -825,7 +825,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(property "Footprint" "atlas_parts_lib:SOIC-8_3.9x4.9mm_P1.27mm_Guard"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -895,10 +895,10 @@
 				)
 			)
 			(symbol "OPA828IDR_1_1"
-				(pin no_connect line
-					(at 0 1.27 0)
-					(length 0)
-					(hide yes)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 5.08)
+
 					(name "NC"
 						(effects
 							(font
@@ -2754,7 +2754,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "atlas_parts_lib:TipContact_Pad_D0.8mm"
+		(property "Footprint" "Connector_Wire:SolderWirePad_1x01_SMD_1x2mm"
 			(at 88.9 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -2831,7 +2831,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "atlas_parts_lib:R_1206_3216Metric_Guard"
 			(at 199.39 86.868 90)
 			(hide yes)
 			(show_name no)
@@ -3776,7 +3776,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "atlas_parts_lib:SOIC-8_3.9x4.9mm_P1.27mm_Guard"
 			(at 172.72 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -4971,7 +4971,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.5pF"
+		(property "Value" "0.2pF"
 			(at 133.35 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4982,7 +4982,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "atlas_parts_lib:C_0603_1608Metric_Guard"
 			(at 130.5052 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -4993,7 +4993,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/UPY-HIGH_Q_NP0_16V-TO-500V"
 			(at 129.54 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -5027,6 +5027,39 @@
 			)
 		)
 		(property "Dielectric" "C0G/NP0"
+			(at 129.54 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" "±0.1pF"
+			(at 129.54 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 129.54 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CQ0603BRNPO9BNR20"
 			(at 129.54 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -5382,4 +5415,11 @@
 		)
 	)
 	(embedded_fonts no)
+
+ (wire (pts (xy 172.72 41.91) (xy 172.72 36.83))
+  (stroke (width 0) (type default)) (uuid "39587cca-b5ba-47ab-94a6-2d2287cbade2"))
+ (global_label "GNDA" (shape input) (at 172.72 36.83 90)
+  (effects (font (size 1.27 1.27)) (justify left)) (uuid "7ebb58ff-0c0e-43d4-b386-0810de028b9b"))
+ (text "U1.1: grounded PCB guard; NC internally" (at 177.8 33.02 0)
+  (effects (font (size 1 1)) (justify left bottom)) (uuid "4fc67db3-5934-49db-adcc-802b46a8c400"))
 )

@@ -1,0 +1,26 @@
+ATLAS TIA - effective local bulk capacitance loop-gain sensitivity
+* This assumes ideal incoming +/-15V sources; it does not test PSU impedance.
+.include vendor/OPAx828.LIB
+.param Cfit=0.5p Cbulk=10u
+.step param Cfit list 0.2p 0.5p
+.step param Cbulk list 1u 3u 10u
+VPLUS VPLUS_IN 0 15
+VMINUS VMINUS_IN 0 -15
+R3 VPLUS_IN VP 10
+R4 VMINUS_IN VN 10
+C2 VP 0 100n
+C3 VN 0 100n
+C4 VP 0 {Cbulk}
+C5 VN 0 {Cbulk}
+Cexternal TIP 0 0
+R1 TIP FB 100Meg
+C1 TIP FB {Cfit}
+Cfeedback_stray TIP FB 1p
+VINJ AMP FB DC 0 AC 1
+XU1 0 TIP VP VN AMP OPAx828
+R2 AMP OUT 220
+Rload OUT 0 100k
+Cload OUT 0 1000p
+.ac dec 100 0.1 100Meg
+.save V(AMP) V(FB)
+.end

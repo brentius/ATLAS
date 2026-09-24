@@ -658,18 +658,13 @@
       {
         "filename": "atlas_tia.kicad_sch",
         "name": "atlas_tia",
-        "uuid": "6e218cf4-5e9e-4564-8984-6d09556373a1"
+        "uuid": "00000000-0000-0000-0000-000000000000"
       }
     ],
-    "used_designators": "U1,J1-3,R1-4,C1-5,TP1-6,#PWR1-8",
+    "used_designators": "",
     "variants": []
   },
-  "sheets": [
-    [
-      "6e218cf4-5e9e-4564-8984-6d09556373a1",
-      "atlas_tia"
-    ]
-  ],
+  "sheets": [],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {

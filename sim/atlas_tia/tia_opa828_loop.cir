@@ -1,0 +1,29 @@
+ATLAS TIA - loop gain with TI OPAx828 PSpice model
+* VINJ is 0 V at DC so the normal bias point is preserved.
+* Loop return ratio is -V(AMP)/V(FB), verified separately below.
+.include vendor/OPAx828.LIB
+.param Cfit=0.5p Cstray=0.1p Cextra=15p Ccable=100p Rreceiver=100k
+.step param Cfit list 0.2p 0.5p 1p 5p
+
+VPLUS VPLUS_IN 0 15
+VMINUS VMINUS_IN 0 -15
+R3 VPLUS_IN VP 10
+R4 VMINUS_IN VN 10
+C2 VP 0 100n
+C3 VN 0 100n
+C4 VP 0 10u
+C5 VN 0 10u
+
+Cexternal TIP 0 {Cextra}
+R1 TIP FB 100Meg
+C1 TIP FB {Cfit}
+Cfeedback_stray TIP FB {Cstray}
+VINJ AMP FB DC 0 AC 1
+XU1 0 TIP VP VN AMP OPAx828
+R2 AMP OUT 220
+Rload OUT 0 {Rreceiver}
+Cload OUT 0 {Ccable}
+
+.ac dec 200 0.1 100Meg
+.save V(AMP) V(FB) V(TIP) V(OUT)
+.end

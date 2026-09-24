@@ -1,0 +1,33 @@
+ATLAS TIA - AC compensation sweep with TI OPAx828 PSpice model
+* Vendor subcircuit order: IN+ IN- VCC VEE OUT.
+* Cextra is tip/PCB/cable capacitance only; the model includes input impedance.
+.include vendor/OPAx828.LIB
+.param Cfit=0.5p Cstray=0.1p Cextra=15p Ccable=100p Rreceiver=100k
+.step param Cfit list 0.2p 0.5p 1p 5p
+
+VPLUS VPLUS_IN 0 15
+VMINUS VMINUS_IN 0 -15
+R3 VPLUS_IN VP 10
+R4 VMINUS_IN VN 10
+C2 VP 0 100n
+C3 VN 0 100n
+C4 VP 0 10u
+C5 VN 0 10u
+
+IIN 0 TIP DC 0 AC 1p
+Cexternal TIP 0 {Cextra}
+R1 TIP RAW 100Meg
+C1 TIP RAW {Cfit}
+Cfeedback_stray TIP RAW {Cstray}
+XU1 0 TIP VP VN RAW OPAx828
+R2 RAW OUT 220
+Rload OUT 0 {Rreceiver}
+Cload OUT 0 {Ccable}
+
+.ac dec 200 0.1 10Meg
+.meas ac gain_1hz FIND mag(V(out)) AT=1
+.meas ac gain_1khz FIND mag(V(out)) AT=1k
+.meas ac peak_gain MAX mag(V(out)) FROM=1 TO=100k
+.meas ac bandwidth WHEN mag(V(out))=gain_1hz/sqrt(2) FALL=1
+.save V(TIP) V(RAW) V(OUT)
+.end

@@ -31,7 +31,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "atlas_parts_lib:SOIC-8_3.9x4.9mm_P1.27mm_Guard"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -87,10 +87,10 @@
 			)
 		)
 		(symbol "OPA828IDR_1_1"
-			(pin no_connect line
-				(at 0 1.27 0)
-				(length 0)
-				(hide yes)
+			(pin passive line
+				(at 0 7.62 270)
+				(length 5.08)
+
 				(name "NC" (effects (font (size 1.27 1.27))))
 				(number "1" (effects (font (size 1.27 1.27))))
 			)

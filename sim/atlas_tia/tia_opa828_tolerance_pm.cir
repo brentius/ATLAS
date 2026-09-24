@@ -1,0 +1,26 @@
+ATLAS TIA - illustrative C1 and R1 tolerance at high-input-capacitance phase corner
+* External Cin=85pF, feedback stray=0, cable=1000pF, receiver=open (1T).
+.include vendor/OPAx828.LIB
+.param Cfit=0.2p Rfeedback=100Meg
+.step param Cfit list 0.1p 0.2p 0.3p 0.4p 0.5p 0.6p
+.step param Rfeedback list 99Meg 100Meg 101Meg
+VPLUS VPLUS_IN 0 15
+VMINUS VMINUS_IN 0 -15
+R3 VPLUS_IN VP 10
+R4 VMINUS_IN VN 10
+C2 VP 0 100n
+C3 VN 0 100n
+C4 VP 0 10u
+C5 VN 0 10u
+Cexternal TIP 0 85p
+R1 TIP FB {Rfeedback}
+C1 TIP FB {Cfit}
+Cfeedback_stray TIP FB 0
+VINJ AMP FB DC 0 AC 1
+XU1 0 TIP VP VN AMP OPAx828
+R2 AMP OUT 220
+Rload OUT 0 1T
+Cload OUT 0 1000p
+.ac dec 100 0.1 100Meg
+.save V(AMP) V(FB)
+.end

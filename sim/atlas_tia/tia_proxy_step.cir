@@ -1,0 +1,36 @@
+ATLAS TIA - preliminary 1 nA step (proxy amplifier only)
+* This is NOT an OPA828 device model or a release qualification.
+.param Cfit=0.5p Cstray=0.1p Cextra=15p Ccable=100p Rreceiver=100k
+.step param Cfit list 0.2p 0.5p 1p 5p
+
+VPLUS VPLUS_IN 0 15
+VMINUS VMINUS_IN 0 -15
+R3 VPLUS_IN VP 10
+R4 VMINUS_IN VN 10
+C2 VP 0 100n
+C3 VN 0 100n
+C4 VP 0 10u
+C5 VN 0 10u
+
+IIN 0 TIP PULSE(0 1n 1m 10n 10n 5m 10m)
+Cdevice TIP 0 15p
+Cexternal TIP 0 {Cextra}
+R1 TIP RAW 100Meg
+C1 TIP RAW {Cfit}
+Cfeedback_stray TIP RAW {Cstray}
+XU1 0 TIP VP VN RAW OPA828_PROXY
+R2 RAW OUT 220
+Rload OUT 0 {Rreceiver}
+Cload OUT 0 {Ccable}
+
+.subckt OPA828_PROXY INP INM VP VN OUT
+EGAIN N1 0 INP INM 1e6
+RDOM N1 N2 1k
+CDOM N2 0 3.536u
+BCLIP DRIVE 0 V=limit(V(N2),V(VN)+0.9,V(VP)-0.9)
+ROUT DRIVE OUT 10
+.ends OPA828_PROXY
+
+.tran 0 8m 0 1u
+.save V(TIP) V(RAW) V(OUT)
+.end

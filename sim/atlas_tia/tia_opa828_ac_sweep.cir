@@ -1,0 +1,32 @@
+ATLAS TIA - full declared AC sensitivity sweep with TI OPAx828 model
+* 4 fitted C1 x 5 external Cin x 4 feedback stray x 4 cable C x 2 receiver loads.
+.include vendor/OPAx828.LIB
+.param Cfit=0.5p Cstray=0.1p Cextra=15p Ccable=100p Rreceiver=100k
+.step param Cfit list 0.2p 0.5p 1p 5p
+.step param Cextra list 0p 5p 15p 35p 85p
+.step param Cstray list 0p 0.1p 0.3p 1p
+.step param Ccable list 0p 100p 500p 1000p
+.step param Rreceiver list 100k 1T
+
+VPLUS VPLUS_IN 0 15
+VMINUS VMINUS_IN 0 -15
+R3 VPLUS_IN VP 10
+R4 VMINUS_IN VN 10
+C2 VP 0 100n
+C3 VN 0 100n
+C4 VP 0 10u
+C5 VN 0 10u
+
+IIN 0 TIP DC 0 AC 1p
+Cexternal TIP 0 {Cextra}
+R1 TIP RAW 100Meg
+C1 TIP RAW {Cfit}
+Cfeedback_stray TIP RAW {Cstray}
+XU1 0 TIP VP VN RAW OPAx828
+R2 RAW OUT 220
+Rload OUT 0 {Rreceiver}
+Cload OUT 0 {Ccable}
+
+.ac dec 100 0.1 10Meg
+.save V(OUT)
+.end
