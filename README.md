@@ -2,17 +2,34 @@
 *Written in the prophetic perfect tense to give myself some motivation*
 
 ATLAS (Atomic-scale Tunneling and Local Analysis Syste*) is a low-cost scanning tunneling microscope (STM) build inspired by Dimsmary's OpenSTM project (https://github.com/Dimsmary/OpenSTM), with the end goal to accurately image carbon atoms on the lattice of a sample of HOPG.
+
+For the current engineering state and design records, see the
+[project status](BOTS/PLANS/STATUS.md), [architecture plan](BOTS/PLANS/ATLAS_ARCHITECTURE.md)
+and [decision log](BOTS/PLANS/DECISIONS.md).
+
 ## File Structure
 
 ```
-\pcb
-\code
-\cad
+pcb/
+code/
+cad/
+sim/
 README.md
-BOM.md
-LICENSE.txt
+LICENSE-HARDWARE
+LICENSE-SOFTWARE
 .gitignore
 ```
+## Licenses
+
+Hardware design files in `pcb/` and `cad/`, including schematics, PCB layouts,
+footprints, and mechanical designs, are licensed under the
+[CERN Open Hardware Licence Version 2 – Strongly Reciprocal](LICENSE-HARDWARE)
+(`CERN-OHL-S-2.0`). Hardware circuit netlists in `sim/` are covered by the same
+license.
+
+Software in `code/` and simulation scripts in `sim/` are licensed under the
+[GNU General Public License Version 3](LICENSE-SOFTWARE) (`GPL-3.0-only`).
+
 ## How does ATLAS work?
 ATLAS is a **scanning tunneling microscope** (STM). Essentially, you have a tip of some hard conductive material (Pt-Ir in this case) that is brought within nanometers of a sample, and very slowly moved along it. As the tip moves along the sample, electrons can tunnel from the atoms in the sample to the tip, which creates a miniscule current. What an STM does is take that current and through PCB wizardry amplify it into something readable, and from that construct a 3D image of the sample at the atomic scale.
 # The project itself...

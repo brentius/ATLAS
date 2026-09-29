@@ -8,7 +8,7 @@
 		(title "ATLAS PSU: linear +/-15 V and +7.5 V supply")
 		(date "2026-09-24")
 		(rev "A")
-		(comment 1 "Design reference: pcb/atlas_psu/PSU_DESIGN_PLAN.md")
+		(comment 1 "Design reference: BOTS/PLANS/PSU_DESIGN_PLAN.md")
 		(comment 2 "Net allocation verified against plan section 3.9")
 	)
 	(lib_symbols
@@ -5805,7 +5805,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.nichicon.com/getmedia/6716b3c6-abcc-4da1-80b0-b33e29e5a195/e-lgy-DB.pdf"
 			(at 38.1 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -5832,7 +5832,7 @@
 		(property "LCSC" "C1582310" (at 38.1 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Tolerance" "20%" (at 38.1 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Voltage" "50V" (at 38.1 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Note" "105 C aluminium snap-in; verify 100 Hz ripple current/life" (at 38.1 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Note" "PROVISIONAL 105 C snap-in, 30x30 mm, 10 mm pitch; 2.1 A rms at 120 Hz; qualify capacitor RMS current and inrush" (at 38.1 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(pin "1"
 			(uuid "0a4ececb-b297-4cc2-b083-d274a3987a05")
 		)
@@ -6660,7 +6660,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.nichicon.com/getmedia/6716b3c6-abcc-4da1-80b0-b33e29e5a195/e-lgy-DB.pdf"
 			(at 72.39 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -6687,7 +6687,7 @@
 		(property "LCSC" "C1582310" (at 72.39 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Tolerance" "20%" (at 72.39 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Voltage" "50V" (at 72.39 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
-		(property "Note" "105 C aluminium snap-in; verify 100 Hz ripple current/life" (at 72.39 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Note" "PROVISIONAL 105 C snap-in, 30x30 mm, 10 mm pitch; 2.1 A rms at 120 Hz; qualify capacitor RMS current and inrush" (at 72.39 68.58 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(pin "1"
 			(uuid "58d037ca-df0c-43c8-8ff4-1abd0c2e2978")
 		)
@@ -8853,7 +8853,7 @@
 		)
 		(uuid "28e954ce-6c90-44b7-a113-e805082b5cdf")
 	)
-	(text "1. OFF-BOARD SOURCE: T1 (2 x 18 V AC, 30 VA) and both secondary fuses FSEC1/FSEC2 are off this PCB.\n   Mains primary, inlet, primary fuse, switch and PE bonding stay in the enclosure; none of it reaches this board.\n   Phase the windings so A2-B1 gives ~36 V AC between J1.1 and J1.4; check before connecting the bridge.\n\n2. SOURCE SELECTION: J2 (NORMAL_SOURCE) reaches J3 (SYSTEM_FEED) ONLY through the removable pin-for-pin cable.\n   There must be NO copper, jumper or shared ground joining REG_* / PSU_0V to SYS_* / SYS_0V on this PCB.\n   Bench mode: remove that cable and feed J3 (+15 V, 0 V, -15 V, +7.5 V). Swap plugs only with sources off and discharged.\n\n3. HEATSINKS: TO-220 tabs are at different potentials: U1 = REG_P15, U3 = REG_AUX, U2 = RAW_N (about -25 V).\n   Each regulator needs an insulating pad and shoulder washer; tabs must not share bare metal or touch the case.\n   Preliminary target: <= 10 C/W per sink; about 3.9 W each for U1/U2 and 3.1 W for U3 at the 33 V raw ceiling.\n\n4. STATUS INTERFACE (J6): do NOT tie STATUS_0V to SYS_0V or PSU_0V on this board.\n   The converter must fit a 47k pulldown on PSU_VALID at its receiver, use a 3.3 V Schmitt input,\n   require 100 ms continuously valid before arming, and latch any rail-loss fault until explicit re-arm.\n\n5. CHASSIS (J7): no PSU_0V / SYS_0V / STATUS_0V to chassis link by default; the single signal-to-chassis bond is set at system level.\n\n6. STORED ENERGY: C1 and C2 each hold about 2.5 J at 33 V. The bleeders alone need about 90 s to reach 5 V; measure before touching.\n   Never clip an earthed scope ground to RAW_N or SYS_N15.\n\n7. BOM: resistor tolerance/power and capacitor voltage are part of each part's fields (MPN, LCSC, Tolerance, Power, Voltage).\n   R2/R4 must be 0.25 W. C7 must be wet aluminium. TP1-TP10 and J7 are copper only (excluded from BOM)."
+	(text "1. OFF-BOARD SOURCE: T1 (2 x 18 V AC, 30 VA) and both secondary fuses FSEC1/FSEC2 are off this PCB.\n   Mains primary, inlet, primary fuse, switch and PE bonding stay in the enclosure; none of it reaches this board.\n   Phase the windings so A2-B1 gives ~36 V AC between J1.1 and J1.4; check before connecting the bridge.\n\n2. SOURCE SELECTION: J2 (NORMAL_SOURCE) reaches J3 (SYSTEM_FEED) ONLY through the removable pin-for-pin cable.\n   There must be NO copper, jumper or shared ground joining REG_* / PSU_0V to SYS_* / SYS_0V on this PCB.\n   Bench mode: remove that cable and feed J3 (+15 V, 0 V, -15 V, +7.5 V). Swap plugs only with sources off and discharged.\n\n3. HEATSINKS: TO-220 tabs are at different potentials: U1 = REG_P15, U3 = REG_AUX, U2 = RAW_N (about -25 V).\n   Each regulator needs an insulating pad and shoulder washer; tabs must not share bare metal or touch the case.\n   Preliminary target: <= 10 C/W per sink; about 3.9 W each for U1/U2 and 3.1 W for U3 at the provisional 33 V raw estimate.\n\n4. STATUS INTERFACE (J6): do NOT tie STATUS_0V to SYS_0V or PSU_0V on this board.\n   The converter must fit a 47k pulldown on PSU_VALID at its receiver, use a 3.3 V Schmitt input,\n   require 100 ms continuously valid before arming, and latch any rail-loss fault until explicit re-arm.\n\n5. CHASSIS (J7): no PSU_0V / SYS_0V / STATUS_0V to chassis link by default; the single signal-to-chassis bond is set at system level.\n\n6. STORED ENERGY: PROVISIONAL C1 and C2 are 4700 uF each. At 33 V, each stores about 2.56 J; with only its 10k bleeder, the nominal 33-to-5 V time is about 89 s (up to about 112 s at +20% C and +5% R). Measure both raw rails before touching.\n   Never clip an earthed scope ground to RAW_N or SYS_N15.\n\n7. BOM: resistor tolerance/power and capacitor voltage are part of each part's fields (MPN, LCSC, Tolerance, Power, Voltage).\n   R2/R4 must be 0.25 W. C7 must be wet aluminium. TP1-TP10 and J7 are copper only (excluded from BOM)."
 		(exclude_from_sim no)
 		(at 285 296 0)
 		(effects
