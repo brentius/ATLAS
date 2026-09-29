@@ -1,18 +1,7 @@
-# Local agent planning and project-state documents
-/BOTS/
-/ATLAS_ARCHITECTURE.md
-[Pp][Ll][Aa][Nn][Ss]/
-[Pp][Ll][Aa][Nn][Nn][Ii][Nn][Gg]/
-[Pp][Ll][Aa][Nn].[Mm][Dd]
-[Pp][Ll][Aa][Nn][Nn][Ii][Nn][Gg].[Mm][Dd]
-*_[Pp][Ll][Aa][Nn].[Mm][Dd]
-*-[Pp][Ll][Aa][Nn].[Mm][Dd]
-[Pp][Ll][Aa][Nn]_*.md
-[Pp][Ll][Aa][Nn]-*.md
-*_[Rr][Ee][Vv][Ii][Ee][Ww].[Mm][Dd]
-*_[Ee][Vv][Aa][Ll][Uu][Aa][Tt][Ii][Oo][Nn].[Mm][Dd]
+# Role instructions are local; BOTS/PLANS is shared project documentation.
+/BOTS/AGENTS/
 
-# PCB sources and parts libraries only; ignore temporary files and design plans.
+# Track PCB sources and parts libraries; ignore temporary files.
 /pcb/**
 !/pcb/**/
 !/pcb/**/*.kicad_pro
@@ -29,9 +18,6 @@
 /pcb/**/_autosave-*
 /pcb/**/~*
 /pcb/**/routing_review/
-
-# Ignore planning files and directories at any depth, regardless of extension.
-*[Pp][Ll][Aa][Nn]*
 
 # TI's downloaded OPAx828 model is kept locally for simulation, not vendored.
 /sim/atlas_tia/vendor/

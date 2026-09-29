@@ -19,7 +19,7 @@ transformer's [200 V lower input rating](https://www.vigortronix.com/wp-content/
 4700 µF leaves only +0.70 V in this idealized case. Winding impedance,
 rectifier conduction, capacitor ESR, temperature, wiring loss and the
 actual stack pulse are not included. See
-[`sim/atlas_psu/RESERVOIR_BUDGET.md`](sim/atlas_psu/RESERVOIR_BUDGET.md).
+[`sim/atlas_psu/RESERVOIR_BUDGET.md`](../../sim/atlas_psu/RESERVOIR_BUDGET.md).
 
 **Trade-offs and alternatives:** The larger part increases inrush,
 charging-current RMS, stored energy and bleeder time. 3300 µF improves

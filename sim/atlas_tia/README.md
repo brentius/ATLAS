@@ -26,7 +26,7 @@ In this baseline, the maximum output magnitude from 1 Hz to 100 kHz occurred
 at 1 Hz for all four values, so no gain peaking appeared in that interval.
 The full 640-case parasitic/load and loop-gain sweep, tolerance corners,
 step checks and evaluation are recorded in
-[`COMPENSATION_STUDY.md`](COMPENSATION_STUDY.md).
+[`COMPENSATION_EVALUATION.md`](../../BOTS/PLANS/COMPENSATION_EVALUATION.md).
 The raw waveform and log files are local generated outputs and are ignored
 by Git.
 

@@ -47,7 +47,7 @@ The minimum bandwidth for each fitted value occurred with 0 pF additional
 input, 1 pF feedback stray, 1000 pF cable and a 100 kΩ receiver. Failure
 of the 1 pF and 5 pF options is due to bandwidth, not simulated phase margin
 or peaking. The full per-case results are in
-[`results/compensation_sweep.csv`](results/compensation_sweep.csv).
+[`compensation_sweep.csv`](../../sim/atlas_tia/results/compensation_sweep.csv).
 
 ## Tolerance and transient checks
 
@@ -75,7 +75,7 @@ corners for 0.2 and 0.5 pF. The measured change at 0.9–1.0 ms was -99.43
 to -100.00 mV; no undershoot beyond the value at 1.099 ms was detected.
 The last 100 µs before that point varied by at most 0.235 mV, consistent
 with continuing settling at the slow corners. See
-[`results/transient_corners.csv`](results/transient_corners.csv).
+[`transient_corners.csv`](../../sim/atlas_tia/results/transient_corners.csv).
 
 Replacing each nominal 10 µF local bulk capacitor with 1 or 3 µF changed
 the minimum-bandwidth results by less than the printed 0.001 Hz and phase
@@ -93,7 +93,7 @@ therefore has about 0.276 pF of model headroom at that tolerance corner. An
 80-case input/output-load check gave 40/40 passing at 1.27 pF stray and 0/40
 passing at 1.28 pF. The reproducible decks, derived results and physical
 test recommendation are in
-[`FEEDBACK_STRAY_BUDGET.md`](FEEDBACK_STRAY_BUDGET.md).
+[`sim/atlas_tia/FEEDBACK_STRAY_BUDGET.md`](../../sim/atlas_tia/FEEDBACK_STRAY_BUDGET.md).
 This diagnostic estimate does not change C1 population or qualify the
 assembled PCB. Measure the board's actual bandwidth with its harness and
 receiver before release.
@@ -114,7 +114,7 @@ receiver before release.
   drift. Simulated phase margin does not replace these checks.
 
 Reproduce the sweep with `LTspice.exe -b tia_opa828_ac_sweep.cir` and
-`LTspice.exe -b tia_opa828_loop_sweep.cir` from `sim/atlas_tia`
+`LTspice.exe -b tia_opa828_loop_sweep.cir` from the parent `sim/atlas_tia`
 directory, then run
 `summarize_sweep.py` against the two base paths. The raw and log outputs are
 ignored by Git; the result CSV is retained.
