@@ -3,10 +3,6 @@
 
 ATLAS (Atomic-scale Tunneling and Local Analysis Syste*) is a low-cost scanning tunneling microscope (STM) build inspired by Dimsmary's OpenSTM project (https://github.com/Dimsmary/OpenSTM), with the end goal to accurately image carbon atoms on the lattice of a sample of HOPG.
 
-For the current engineering state and design records, see the
-[project status](BOTS/PLANS/STATUS.md), [architecture plan](BOTS/PLANS/ATLAS_ARCHITECTURE.md)
-and [decision log](BOTS/PLANS/DECISIONS.md).
-
 ## File Structure
 
 ```

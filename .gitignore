@@ -1,5 +1,5 @@
-# Role instructions are local; BOTS/PLANS is shared project documentation.
-/BOTS/AGENTS/
+# Local agent instructions, plans and project-state documents.
+/BOTS/
 
 # Track PCB sources and parts libraries; ignore temporary files.
 /pcb/**
