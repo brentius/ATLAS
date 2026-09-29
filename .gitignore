@@ -1,4 +1,5 @@
-# Local architecture and planning documents
+# Local agent planning and project-state documents
+/BOTS/
 /ATLAS_ARCHITECTURE.md
 [Pp][Ll][Aa][Nn][Ss]/
 [Pp][Ll][Aa][Nn][Nn][Ii][Nn][Gg]/
@@ -29,6 +30,9 @@
 /pcb/**/~*
 /pcb/**/routing_review/
 
+# Ignore planning files and directories at any depth, regardless of extension.
+*[Pp][Ll][Aa][Nn]*
+
 # TI's downloaded OPAx828 model is kept locally for simulation, not vendored.
 /sim/atlas_tia/vendor/
 /sim/atlas_tia/*.log
@@ -36,3 +40,4 @@
 /sim/atlas_tia/*.db
 /sim/atlas_tia/__pycache__/
 /sim/atlas_tia/generated/
+/sim/atlas_psu/__pycache__/

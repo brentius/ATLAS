@@ -4642,7 +4642,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.nichicon.com/getmedia/6716b3c6-abcc-4da1-80b0-b33e29e5a195/e-lgy-DB.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4741,7 +4741,7 @@
 				)
 			)
 		)
-		(property "Note" "105 C aluminium snap-in; verify 100 Hz ripple current/life"
+		(property "Note" "PROVISIONAL 105 C snap-in, 30x30 mm, 10 mm pitch; 2.1 A rms at 120 Hz; qualify capacitor RMS current and inrush"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20466,7 +20466,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.nichicon.com/getmedia/6716b3c6-abcc-4da1-80b0-b33e29e5a195/e-lgy-DB.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20565,7 +20565,7 @@
 				)
 			)
 		)
-		(property "Note" "105 C aluminium snap-in; verify 100 Hz ripple current/life"
+		(property "Note" "PROVISIONAL 105 C snap-in, 30x30 mm, 10 mm pitch; 2.1 A rms at 120 Hz; qualify capacitor RMS current and inrush"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
