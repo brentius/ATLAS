@@ -6,7 +6,9 @@ The [README](../../README.md#damping) describes an eight-spring suspension
 carrying a 12 lb granite slab and states a 1 Hz natural frequency. No spring
 rate, total moving mass, geometry, damping measurement or free-decay record
 is available in this repository. **The 1 Hz value is unverified here.**
-This calculation does not select a spring or change the head design.
+This calculation does not select a spring or change the head design. The
+[isolation-options review](ISOLATION_OPTIONS.md) compares other STM builds
+and shows how adjustable slab mass changes frequency at fixed spring rate.
 
 For an ideal vertical, linear, zero-preload spring set carrying only the
 stated slab mass, a 1 Hz vertical mode requires **215 N/m combined tangent
